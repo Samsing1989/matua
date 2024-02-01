@@ -1,0 +1,114 @@
+//========================================================================================================================================================
+.footer {
+    &__contacts {
+        @include adaptiveValue('padding-top', 51, 30);
+        @include adaptiveValue('padding-bottom', 69, 30);
+        background-color: #d84727;
+        color: #fff;
+    }
+}
+
+.contacts {
+    &__container {
+    }
+
+    &__row {
+        display: grid;
+        justify-content: space-between;
+        @include adaptiveValue('gap', 20, 10);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__column {
+        @media (max-width: em(515)) {
+            text-align: center;
+        }
+        &:not(:last-child) {
+            margin-bottom: toRem(30);
+        }
+    }
+
+    &__logo {
+        img {
+            max-width: 100%;
+        }
+        &:not(:last-child) {
+            margin-bottom: toRem(27);
+        }
+    }
+
+    &__label {
+        font-size: toRem(20);
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.4px;
+        &:not(:last-child) {
+            margin-bottom: toRem(2);
+        }
+    }
+
+    &__text {
+        line-height: normal;
+        letter-spacing: 0.48px;
+        &:not(:last-child) {
+            margin-bottom: toRem(16);
+        }
+    }
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: toRem(28);
+        }
+    }
+
+    &__tel-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include adaptiveValue('gap', 40, 15);
+        &:not(:last-child) {
+            margin-bottom: toRem(24);
+        }
+    }
+    &__label-tel {
+        font-size: toRem(20);
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.4px;
+        flex: 1 1 38.039216%; /* 97/255 */
+    }
+    &__span {
+        flex: 1 1 47.843137%; /* 122/255 */
+        display: inline;
+        position: relative;
+    }
+    &__social-list {
+        display: flex;
+        @include adaptiveValue('gap', 25, 15);
+        font-size: toRem(32);
+        @media (max-width: em(515)) {
+            justify-content: center;
+        }
+    }
+
+    &__solial-item {
+        transition: all 0.5s;
+        &:hover {
+            transform: rotate(360deg) scale(1.4);
+        }
+    }
+
+    &__social-link {
+    }
+
+    &__list {
+    }
+
+    &__item {
+        line-height: 200%; /* 200% */
+        letter-spacing: 0.48px;
+        &:not(:last-child) {
+            margin-bottom: toRem(16);
+        }
+    }
+}

@@ -1,0 +1,86 @@
+{
+    "messages": {
+        "welcome": "Welcome to our pizzeria! To place an order, log in and enjoy.",
+        "welcome-in": "The best pizza in your city!",
+        "enterMessage": "Please register or sign-in to use the services",
+        "products": "Products list",
+        "filters": "Filters",
+        "empty": "The cart is empty",
+        "total": "Total price",
+        "no-result": "No result",
+        "not-found": "Sorry, we couldn't find this page",
+        "error": "Internal server error",
+        "description": "Description",
+        "enter": "Enter your password to access this website",
+        "sign-in-text": "If you have an account please",
+        "google": "Login with Google acc.",
+        "wrong-message": "Incorrect email or password",
+        "email-in": "This user is registered",
+        "editor": "Edit Page",
+        "contact-msg": "Contact Us",
+        "contact-info": "To order, please contact us by phone:",
+        "to-cart-msg": "Items added to the cart successfully :) If you want continue to shopping please click 'CONTINUE SHOPPING'. To place an order, click on 'GO TO THE CART'"
+    },
+    "nav": {
+        "products": "Watches",
+        "news": "News"
+    },
+    "title": {
+        "watchesTitle": "Monthly Deals",
+        "newsTitle": "News watches",
+        "swiperTitle": "OUR BEST OFFERS",
+        "footerTitle": "Get in touch",
+        "galerryTitle": "Gallery",
+        "loginTitle": "Register or log in using your email address",
+        "loginTitle2": "Sign in with your Google account"
+    },
+    "label": {
+        "addressLabel": "Address",
+        "officeLabel": "Office Hour",
+        "phoneLable": "Phone",
+        "serviceLable": "Service Center",
+        "customerLable": "Customer Service",
+        "LogIn": "Log In",
+        "imgLable": "Pictures",
+        "nameLable": "Name",
+        "savingLable": "Saving",
+        "oldPriceLable": "Old price",
+        "newPriceLable": "New price",
+        "textPriceLable": "Text",
+        "noUserd": "No userd"
+    },
+    "text": {
+        "swiperText": "Buckle up for a splash of color and a burst of Aussie charm as Bausele, Australia’s first luxury watch brand, jazzes up its ",
+        "fotterTextAdress1": "Store & Office",
+        "fotterTextAdress2": "Jl. Setrasari Kulon III, No. 10-12,",
+        "fotterTextAdress3": "Sukarasa, Sukasari, Bandung,",
+        "fotterTextAdress4": "Jawa Barat, Indonesia 40152",
+        "fotterTextDay": "Monday - Sunday"
+    },
+
+    "button": {
+        "filterButton": "Find the clock",
+        "fromButton": "From",
+        "toButton": "To",
+        "filterClearButton": "Clean",
+        "swiperButton": "Go to shop",
+        "deleteButton": "Delete",
+        "onLogout": "Go out",
+        "update": "Update",
+        "onEdit": "Edit",
+        "addToCart": "Add to cart",
+        "register": "Register"
+    },
+
+    "pages": {
+        "users": {
+            "fields": {
+                "email": "Email",
+                "create": "Crteate",
+                "read": "Read",
+                "update": "Update",
+                "delete": "Delete"
+            }
+        }
+    }
+}

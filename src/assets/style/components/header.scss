@@ -1,0 +1,299 @@
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    min-height: toRem(70);
+    padding-top: toRem(10);
+    padding-bottom: toRem(10);
+    background-color: #f7f6f499;
+    &__container {
+        display: flex;
+        column-gap: toRem(10);
+        align-items: center;
+        row-gap: toRem(20);
+        @media (max-width: em(450)) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__logo {
+        img {
+            max-width: 100%;
+        }
+        @media (max-width: $mobile) {
+            position: relative;
+            z-index: 5;
+        }
+    }
+
+    &__menu {
+    }
+
+    &__active {
+        display: flex;
+        column-gap: toRem(20);
+        align-items: center;
+
+        @media (max-width: $mobile) {
+            position: relative;
+            z-index: 5;
+        }
+        @media (max-width: em(450)) {
+            width: 100%;
+            justify-content: space-between;
+        }
+    }
+
+    &__active-links {
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+        gap: toRem(15);
+        font-size: toRem(24);
+    }
+
+    &__link {
+        position: relative;
+    }
+
+    &__basket-span {
+        position: absolute;
+        top: toRem(5);
+        right: toRem(7);
+        font-weight: 700;
+        font-size: toRem(18);
+        color: red;
+    }
+    &__icon {
+    }
+
+    &__lang {
+        background-color: #f1ddc9;
+        display: flex;
+        flex: 0 0 toRem(50);
+        justify-content: center;
+        align-items: center;
+        width: toRem(50);
+        height: toRem(50);
+        border-radius: 50%;
+        cursor: pointer;
+    }
+}
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: toRem(20);
+    line-height: normal;
+    letter-spacing: 0.4px;
+    @media (min-width: em(450)) {
+        flex: 1 1 auto;
+    }
+    &__body {
+        display: flex;
+        @include adaptiveValue(' column-gap', 31, 15);
+        row-gap: toRem(10);
+        @media (max-width: $mobile) {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            left: -100%;
+            display: flex;
+            top: 0;
+            flex-direction: column;
+            align-items: end;
+            background-color: #fff;
+            padding: toRem(120) toRem(15) toRem(30) toRem(15);
+            overflow: auto;
+            transition: left 0.3s ease 0s;
+            font-size: toRem(40);
+
+            &::before {
+                content: '';
+                position: fixed;
+                width: 100%;
+                background-color: #fff;
+                top: 0;
+                left: -100%;
+                transition: left 0.3s;
+
+                @include adaptiveValue('min-height', 120, 70);
+            }
+            .menu-open & {
+                left: 0;
+                &::before {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            height: toRem(2);
+            background-color: #000000;
+            bottom: toRem(-2);
+            left: 50%;
+            width: 0;
+            transition: all 0.3s ease 0s;
+        }
+        &:hover::after {
+            left: 0;
+            width: 100%;
+        }
+    }
+}
+
+.link-basket {
+    display: flex;
+    flex: 0 0 toRem(50);
+    justify-content: center;
+    align-items: center;
+    width: toRem(50);
+    height: toRem(50);
+    background-color: #f1ddc9;
+    border-radius: 50%;
+}
+.icon-menu {
+}
+
+//=======================burger=menu=================================================================================================================================
+.icon-menu {
+    display: none;
+    @media (max-width: $mobile) {
+        display: block;
+        position: relative;
+        width: toRem(30);
+        height: toRem(18);
+        flex: 0 0 toRem(30);
+        z-index: 5;
+        @media (any-hover: none) {
+            cursor: default;
+        }
+        span,
+        &::before,
+        &::after {
+            content: '';
+            transition: all 0.3s ease 0s;
+            right: 0;
+            position: absolute;
+            width: 100%;
+            height: toRem(2);
+            background-color: #000;
+        }
+        &::before {
+            top: 0;
+        }
+        &::after {
+            bottom: 0;
+        }
+        span {
+            top: calc(50% - toRem(1));
+        }
+        .menu-open & {
+            span {
+                width: 0;
+            }
+            &::before,
+            &::after {
+            }
+            &::before {
+                top: calc(50% - toRem(1));
+                transform: rotate(-45deg);
+            }
+            &::after {
+                bottom: calc(50% - toRem(1));
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+//============================================login============================================================================================================
+.login {
+    &__container {
+        max-width: toRem(400);
+        text-align: center;
+        padding-top: toRem(100);
+        padding-bottom: toRem(50);
+        display: flex;
+        flex-direction: column;
+        gap: toRem(30);
+    }
+
+    &__title {
+        font-size: toRem(28);
+        max-width: toRem(400);
+        line-height: 1.4;
+    }
+
+    &__lable {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        padding: toRem(10) toRem(10);
+    }
+
+    &__active {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: toRem(20);
+        flex-wrap: wrap;
+    }
+    &__button {
+        @media (max-width: em(465)) {
+            width: 100%;
+        }
+    }
+}
+
+//============================login-header============================================================================================================================
+
+.login-header {
+    &__container {
+        display: flex;
+        gap: toRem(5);
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    &__image {
+        width: toRem(50);
+        height: toRem(50);
+        position: relative;
+        img {
+            border-radius: 50%;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+
+    &__active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: toRem(10);
+        span {
+            @include adaptiveValue('font-size', 18, 10);
+        }
+    }
+    &__button {
+        //   padding: toRem(10) toRem(10);
+        max-width: toRem(140);
+        max-height: toRem(30);
+    }
+}
